@@ -7,7 +7,7 @@ import 'package:recychamp/screens/EducationalResources/bloc/article_details_bloc
 class UpdateArticleForm extends StatefulWidget {
   final Article article;
 
-  UpdateArticleForm({required this.article});
+  const UpdateArticleForm({super.key, required this.article});
 
   @override
   _UpdateArticleFormState createState() => _UpdateArticleFormState();
@@ -47,7 +47,7 @@ class _UpdateArticleFormState extends State<UpdateArticleForm> {
         ),
         body: Container(
           child: Padding(
-            padding: EdgeInsets.all(25.0),
+            padding: const EdgeInsets.all(25.0),
             child: Form(
               key: _formKey,
               child: ListView(
@@ -140,7 +140,7 @@ class _UpdateArticleFormState extends State<UpdateArticleForm> {
                         color: Colors.black),
                   ),
                   DropdownButtonFormField<String>(
-                    value: selectedType,
+                    initialValue: selectedType,
                     items: [
                       "Nature",
                       "PlantTrees",
@@ -210,15 +210,15 @@ class _UpdateArticleFormState extends State<UpdateArticleForm> {
                   ElevatedButton(
                       style: ButtonStyle(
                         shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                            WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16.8),
                           ),
                         ),
-                        padding: MaterialStateProperty.all(
+                        padding: WidgetStateProperty.all(
                             const EdgeInsets.symmetric(vertical: 17.88)),
                         backgroundColor:
-                            MaterialStateProperty.all<Color>(Colors.black),
+                            WidgetStateProperty.all<Color>(Colors.black),
                       ),
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {

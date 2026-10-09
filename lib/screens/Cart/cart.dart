@@ -121,15 +121,15 @@ class _CartState extends State<Cart> {
                       payment();
                     },
                     style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(16.8),
                         ),
                       ),
-                      padding: MaterialStateProperty.all(
+                      padding: WidgetStateProperty.all(
                           const EdgeInsets.symmetric(vertical: 17.88)),
                       backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.black),
+                          WidgetStateProperty.all<Color>(Colors.black),
                     ),
                     child: Text(
                       "Checkout",
@@ -241,7 +241,7 @@ class _CartState extends State<Cart> {
                         style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
-                            color: Colors.black.withOpacity(0.5)),
+                            color: Colors.black.withValues(alpha: 0.5)),
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -261,15 +261,15 @@ class _CartState extends State<Cart> {
                         },
                         style: ButtonStyle(
                           shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                              WidgetStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(16.8),
                             ),
                           ),
-                          padding: MaterialStateProperty.all(
+                          padding: WidgetStateProperty.all(
                               const EdgeInsets.symmetric(vertical: 17.88)),
                           backgroundColor:
-                              MaterialStateProperty.all<Color>(Colors.black),
+                              WidgetStateProperty.all<Color>(Colors.black),
                         ),
                         child: Text(
                           "Go back to Home",

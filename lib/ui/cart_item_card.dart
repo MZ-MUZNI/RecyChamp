@@ -76,7 +76,7 @@ class _CartItemCardState extends State<CartItemCard> {
                         style: GoogleFonts.poppins(
                             fontSize: 18,
                             fontWeight: FontWeight.w700,
-                            color: Colors.black.withOpacity(0.4)),
+                            color: Colors.black.withValues(alpha: 0.4)),
                       ),
                       const SizedBox(
                         height: 10,
@@ -100,7 +100,7 @@ class _CartItemCardState extends State<CartItemCard> {
                               style: GoogleFonts.poppins(
                                   fontSize: 18,
                                   fontWeight: FontWeight.w700,
-                                  color: Colors.black.withOpacity(0.4)),
+                                  color: Colors.black.withValues(alpha: 0.4)),
                             ),
                             const SizedBox(
                               width: 10,

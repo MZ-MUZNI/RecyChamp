@@ -198,7 +198,7 @@ class _ChallengeDetailsState extends State<ChallengeDetails> {
                               begin: const Alignment(0.01, 0),
                               end: const Alignment(0.02, 0.80),
                               colors: [
-                                Colors.black.withOpacity(0),
+                                Colors.black.withValues(alpha: 0),
                                 Colors.black
                               ],
                             ).createShader(bounds);
@@ -408,8 +408,8 @@ class _ChallengeDetailsState extends State<ChallengeDetails> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                         color: Colors.black
-                                                            .withOpacity(
-                                                                0.6499999761581421),
+                                                            .withValues(
+                                                                alpha: 0.6499999761581421),
                                                         fontSize: 14,
                                                         fontWeight:
                                                             FontWeight.w400,
@@ -422,8 +422,8 @@ class _ChallengeDetailsState extends State<ChallengeDetails> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                         color: Colors.black
-                                                            .withOpacity(
-                                                                0.6499999761581421),
+                                                            .withValues(
+                                                                alpha: 0.6499999761581421),
                                                         fontSize: 14,
                                                         fontWeight:
                                                             FontWeight.w700,
@@ -436,8 +436,8 @@ class _ChallengeDetailsState extends State<ChallengeDetails> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                         color: Colors.black
-                                                            .withOpacity(
-                                                                0.6499999761581421),
+                                                            .withValues(
+                                                                alpha: 0.6499999761581421),
                                                         fontSize: 14,
                                                         fontWeight:
                                                             FontWeight.w400,
@@ -683,15 +683,15 @@ class _ChallengeDetailsState extends State<ChallengeDetails> {
                               // todo add challenge submit form
                             },
                             style: ButtonStyle(
-                              shape: MaterialStateProperty.all<
+                              shape: WidgetStateProperty.all<
                                   RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(16.8),
                                 ),
                               ),
-                              padding: MaterialStateProperty.all(
+                              padding: WidgetStateProperty.all(
                                   const EdgeInsets.symmetric(vertical: 17.88)),
-                              backgroundColor: MaterialStateProperty.all<Color>(
+                              backgroundColor: WidgetStateProperty.all<Color>(
                                   Colors.black),
                             ),
                             child: Text(

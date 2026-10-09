@@ -170,7 +170,7 @@ class _ChallengeSubmissionState extends State<ChallengeSubmission> {
                                   TextSpan(
                                     text: widget.challenge.title,
                                     style: GoogleFonts.poppins(
-                                      color: Colors.black.withOpacity(0.50),
+                                      color: Colors.black.withValues(alpha: 0.50),
                                       fontSize: 16,
                                       fontWeight: FontWeight.w400,
                                       height: 0,
@@ -197,7 +197,7 @@ class _ChallengeSubmissionState extends State<ChallengeSubmission> {
                                   TextSpan(
                                     text: widget.challenge.description,
                                     style: GoogleFonts.poppins(
-                                      color: Colors.black.withOpacity(0.50),
+                                      color: Colors.black.withValues(alpha: 0.50),
                                       fontSize: 16,
                                       fontWeight: FontWeight.w400,
                                       height: 0,
@@ -229,7 +229,7 @@ class _ChallengeSubmissionState extends State<ChallengeSubmission> {
                                     style: GoogleFonts.poppins(
                                       color: DateTime.now().isBefore(
                                               widget.challenge.endDateTime)
-                                          ? Colors.black.withOpacity(0.50)
+                                          ? Colors.black.withValues(alpha: 0.50)
                                           : Colors.red,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w400,
@@ -257,7 +257,7 @@ class _ChallengeSubmissionState extends State<ChallengeSubmission> {
                                   TextSpan(
                                     text: "Platinum Warrior Badge",
                                     style: GoogleFonts.poppins(
-                                      color: Colors.black.withOpacity(0.50),
+                                      color: Colors.black.withValues(alpha: 0.50),
                                       fontSize: 16,
                                       fontWeight: FontWeight.w400,
                                       height: 0,
@@ -370,8 +370,8 @@ class _ChallengeSubmissionState extends State<ChallengeSubmission> {
                                                 style: GoogleFonts.poppins(
                                                   fontSize: 14,
                                                   color: Colors.black
-                                                      .withOpacity(
-                                                          0.6000000238418579),
+                                                      .withValues(
+                                                          alpha: 0.6000000238418579),
                                                 ),
                                               ),
                                               const SizedBox(
@@ -384,7 +384,7 @@ class _ChallengeSubmissionState extends State<ChallengeSubmission> {
                                                           field) {
                                                     return TextButton(
                                                       style: ButtonStyle(
-                                                        shape: MaterialStateProperty
+                                                        shape: WidgetStateProperty
                                                             .all<
                                                                 RoundedRectangleBorder>(
                                                           RoundedRectangleBorder(
@@ -395,7 +395,7 @@ class _ChallengeSubmissionState extends State<ChallengeSubmission> {
                                                           ),
                                                         ),
                                                         padding:
-                                                            MaterialStateProperty.all(
+                                                            WidgetStateProperty.all(
                                                                 const EdgeInsets
                                                                     .symmetric(
                                                                     vertical:
@@ -403,11 +403,11 @@ class _ChallengeSubmissionState extends State<ChallengeSubmission> {
                                                                     horizontal:
                                                                         20)),
                                                         backgroundColor:
-                                                            MaterialStateProperty.all<
+                                                            WidgetStateProperty.all<
                                                                 Color>(const Color(
                                                                     0xFF75A488)
-                                                                .withOpacity(
-                                                                    0.6000000238418579)),
+                                                                .withValues(
+                                                                    alpha: 0.6000000238418579)),
                                                       ),
                                                       onPressed: _getImages,
                                                       child: Text(
@@ -608,7 +608,7 @@ class _ChallengeSubmissionState extends State<ChallengeSubmission> {
                                               },
                                               style: ButtonStyle(
                                                 shape:
-                                                    MaterialStateProperty.all<
+                                                    WidgetStateProperty.all<
                                                         RoundedRectangleBorder>(
                                                   RoundedRectangleBorder(
                                                     borderRadius:
@@ -617,12 +617,12 @@ class _ChallengeSubmissionState extends State<ChallengeSubmission> {
                                                   ),
                                                 ),
                                                 padding:
-                                                    MaterialStateProperty.all(
+                                                    WidgetStateProperty.all(
                                                         const EdgeInsets
                                                             .symmetric(
                                                             vertical: 17.88)),
                                                 backgroundColor:
-                                                    MaterialStateProperty.all<
+                                                    WidgetStateProperty.all<
                                                         Color>(Colors.black),
                                               ),
                                               child: BlocBuilder<

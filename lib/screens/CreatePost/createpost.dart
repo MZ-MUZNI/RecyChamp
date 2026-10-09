@@ -138,7 +138,7 @@ class _CreatePostState extends State<CreatePost> {
       photoUrl: imageUrl,
       createdAt: DateTime.now(),
       likesCount: 0,
-      likesList: [],
+      likesList: const [],
     );
 
     await _postService.addPost(post);
@@ -293,7 +293,7 @@ class _CreatePostState extends State<CreatePost> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Container(
+                  SizedBox(
                     height: 130,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -329,10 +329,10 @@ class _CreatePostState extends State<CreatePost> {
                         builder: (context, snapshot) {
                           if (snapshot.connectionState ==
                               ConnectionState.waiting) {
-                            return CircularProgressIndicator();
+                            return const CircularProgressIndicator();
                           } else if (snapshot.hasError ||
                               snapshot.data == null) {
-                            return Text("Failed to load photo");
+                            return const Text("Failed to load photo");
                           } else {
                             String imageURL = snapshot.data!;
                             return CircleAvatar(
@@ -350,10 +350,10 @@ class _CreatePostState extends State<CreatePost> {
                         builder: (context, snapshot) {
                           if (snapshot.connectionState ==
                               ConnectionState.waiting) {
-                            return CircularProgressIndicator();
+                            return const CircularProgressIndicator();
                           } else if (snapshot.hasError ||
                               snapshot.data == null) {
-                            return Text("Failed to load username");
+                            return const Text("Failed to load username");
                           } else {
                             String userName = snapshot.data!;
                             return Text(
@@ -451,7 +451,7 @@ class _CreatePostState extends State<CreatePost> {
                                   style: GoogleFonts.poppins(
                                     fontSize: 14,
                                     color: Colors.black
-                                        .withOpacity(0.6000000238418579),
+                                        .withValues(alpha: 0.6000000238418579),
                                   ),
                                 ),
                                 const SizedBox(
@@ -462,22 +462,22 @@ class _CreatePostState extends State<CreatePost> {
                                   builder: (FormFieldState<dynamic> field) {
                                     return TextButton(
                                       style: ButtonStyle(
-                                        shape: MaterialStateProperty.all<
+                                        shape: WidgetStateProperty.all<
                                             RoundedRectangleBorder>(
                                           RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(10),
                                           ),
                                         ),
-                                        padding: MaterialStateProperty.all(
+                                        padding: WidgetStateProperty.all(
                                             const EdgeInsets.symmetric(
                                                 vertical: 10.88,
                                                 horizontal: 20)),
                                         backgroundColor:
-                                            MaterialStateProperty.all<Color>(
+                                            WidgetStateProperty.all<Color>(
                                                 const Color(0xFF75A488)
-                                                    .withOpacity(
-                                                        0.6000000238418579)),
+                                                    .withValues(
+                                                        alpha: 0.6000000238418579)),
                                       ),
                                       onPressed: () {
                                         _selectImage();
@@ -518,7 +518,7 @@ class _CreatePostState extends State<CreatePost> {
             ),
             // submit button
             Container(
-              margin: EdgeInsets.only(bottom: 10),
+              margin: const EdgeInsets.only(bottom: 10),
               child: SizedBox(
                 width: double.infinity,
                 child: TextButton(
@@ -532,15 +532,15 @@ class _CreatePostState extends State<CreatePost> {
                     }
                   },
                   style: ButtonStyle(
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16.8),
                       ),
                     ),
-                    padding: MaterialStateProperty.all(
+                    padding: WidgetStateProperty.all(
                         const EdgeInsets.symmetric(vertical: 17.88)),
                     backgroundColor:
-                        MaterialStateProperty.all<Color>(Colors.black),
+                        WidgetStateProperty.all<Color>(Colors.black),
                   ),
                   child: Text(
                     "Publish",

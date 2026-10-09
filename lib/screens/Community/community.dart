@@ -84,7 +84,7 @@ class _CommunityState extends State<Community> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => SettingsPage(),
+                            builder: (context) => const SettingsPage(),
                           ),
                         );
                       },

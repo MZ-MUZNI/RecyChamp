@@ -136,7 +136,7 @@ class _EducationalResourceState extends State<EducationalResource> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SettingsPage(),
+                              builder: (context) => const SettingsPage(),
                             ),
                           );
                         },
@@ -240,7 +240,7 @@ class _EducationalResourceState extends State<EducationalResource> {
                               if (state.articles.any(
                                   (article) => article.articleType == "Nature"))
                                 Container(
-                                  margin: EdgeInsets.only(right: 9),
+                                  margin: const EdgeInsets.only(right: 9),
                                   height: 350,
                                   child: ListView.separated(
                                     scrollDirection: Axis.horizontal,
@@ -262,7 +262,7 @@ class _EducationalResourceState extends State<EducationalResource> {
                               if (state.articles.any((article) =>
                                   article.articleType == "PlantTrees"))
                                 Container(
-                                  margin: EdgeInsets.only(right: 9),
+                                  margin: const EdgeInsets.only(right: 9),
                                   height: 350,
                                   child: ListView.separated(
                                     scrollDirection: Axis.horizontal,
@@ -285,7 +285,7 @@ class _EducationalResourceState extends State<EducationalResource> {
                               if (state.articles.any((article) =>
                                   article.articleType == "Eco-Friendly"))
                                 Container(
-                                  margin: EdgeInsets.only(right: 9),
+                                  margin: const EdgeInsets.only(right: 9),
                                   height: 350,
                                   child: ListView.separated(
                                     scrollDirection: Axis.horizontal,
@@ -309,7 +309,7 @@ class _EducationalResourceState extends State<EducationalResource> {
                               if (state.articles.any((article) =>
                                   article.articleType == "Recy-Challenges"))
                                 Container(
-                                  margin: EdgeInsets.only(right: 9),
+                                  margin: const EdgeInsets.only(right: 9),
                                   height: 350,
                                   child: ListView.separated(
                                     scrollDirection: Axis.horizontal,
@@ -333,7 +333,7 @@ class _EducationalResourceState extends State<EducationalResource> {
                               if (state.articles.any((article) =>
                                   article.articleType == "Recy-Guide"))
                                 Container(
-                                  margin: EdgeInsets.only(right: 9),
+                                  margin: const EdgeInsets.only(right: 9),
                                   height: 350,
                                   child: ListView.separated(
                                     scrollDirection: Axis.horizontal,
@@ -357,7 +357,7 @@ class _EducationalResourceState extends State<EducationalResource> {
                               if (state.articles.any(
                                   (article) => article.articleType == "Other"))
                                 Container(
-                                  margin: EdgeInsets.only(right: 9),
+                                  margin: const EdgeInsets.only(right: 9),
                                   height: 350,
                                   child: ListView.separated(
                                     scrollDirection: Axis.horizontal,
@@ -403,7 +403,7 @@ class _EducationalResourceState extends State<EducationalResource> {
     );
   }
 
-  Widget articleCard({required Article articleData}) => Container(
+  Widget articleCard({required Article articleData}) => SizedBox(
         width: 250,
         child: Column(
           children: [
@@ -474,7 +474,7 @@ class _EducationalResourceState extends State<EducationalResource> {
                       children: [CircularProgressIndicator()],
                     ),
                   ),
-                  errorWidget: (context, url, error) => Icon(Icons.error),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
                   // padding: const EdgeInsetsDirectional.only(start: 9.0),
                   fit: BoxFit.cover,
                   imageBuilder: (context, imageProvider) => Ink.image(

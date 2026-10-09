@@ -91,23 +91,23 @@ class _ParentAgreementState extends State<ParentAgreement> {
                       Navigator.of(context).pop();
                     },
                     style: ButtonStyle(
-                      shape: MaterialStateProperty.all(
+                      shape: WidgetStateProperty.all(
                         RoundedRectangleBorder(
                           side: const BorderSide(width: 1),
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      backgroundColor: MaterialStateProperty.all(
+                      backgroundColor: WidgetStateProperty.all(
                         const Color(0xffFFFFFF),
                       ),
-                      foregroundColor: MaterialStateProperty.all(
+                      foregroundColor: WidgetStateProperty.all(
                         const Color(0xff000000),
                       ),
-                      padding: MaterialStateProperty.all(
+                      padding: WidgetStateProperty.all(
                         const EdgeInsets.symmetric(
                             horizontal: 20, vertical: 10),
                       ),
-                      fixedSize: MaterialStateProperty.all(
+                      fixedSize: WidgetStateProperty.all(
                         const Size(167, 63),
                       ),
                     ),
@@ -123,22 +123,22 @@ class _ParentAgreementState extends State<ParentAgreement> {
                       Navigator.of(context).pop();
                     },
                     style: ButtonStyle(
-                      shape: MaterialStateProperty.all(
+                      shape: WidgetStateProperty.all(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      backgroundColor: MaterialStateProperty.all(
+                      backgroundColor: WidgetStateProperty.all(
                         const Color(0xff000000),
                       ),
-                      foregroundColor: MaterialStateProperty.all(
+                      foregroundColor: WidgetStateProperty.all(
                         const Color(0xffFFFFFF),
                       ),
-                      padding: MaterialStateProperty.all(
+                      padding: WidgetStateProperty.all(
                         const EdgeInsets.symmetric(
                             horizontal: 20, vertical: 10),
                       ),
-                      fixedSize: MaterialStateProperty.all(
+                      fixedSize: WidgetStateProperty.all(
                         const Size(167, 63),
                       ),
                     ),

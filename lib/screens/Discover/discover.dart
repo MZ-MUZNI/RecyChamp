@@ -66,7 +66,7 @@ class _DiscoverState extends State<Discover> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => SettingsPage(),
+        builder: (context) => const SettingsPage(),
       ),
     );
   },
@@ -248,7 +248,7 @@ class _DiscoverState extends State<Discover> {
                                                 style: GoogleFonts.poppins(
                                                     fontSize: 14,
                                                     color: Colors.black
-                                                        .withOpacity(0.5)),
+                                                        .withValues(alpha: 0.5)),
                                               ),
                                               const SizedBox(
                                                 height: 5,

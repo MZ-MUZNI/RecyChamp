@@ -180,15 +180,15 @@ class _ProductDetailsState extends State<ProductDetails> {
                         },
                         style: ButtonStyle(
                           shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                              WidgetStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(16.8),
                             ),
                           ),
-                          padding: MaterialStateProperty.all(
+                          padding: WidgetStateProperty.all(
                               const EdgeInsets.symmetric(vertical: 17.88)),
                           backgroundColor:
-                              MaterialStateProperty.all<Color>(Colors.black),
+                              WidgetStateProperty.all<Color>(Colors.black),
                         ),
                         child: Text(
                           "Add to cart",

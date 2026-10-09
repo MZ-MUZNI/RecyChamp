@@ -175,7 +175,7 @@ class _ChallengesState extends State<Challenges> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SettingsPage(),
+                              builder: (context) => const SettingsPage(),
                             ),
                           );
                         },

@@ -12,13 +12,13 @@ class FetchArticleEvent extends ArticleDetailsEvent {}
 class AddArticleEvent extends ArticleDetailsEvent {
   final Map<String, dynamic> formData;
 
-  AddArticleEvent(this.formData);
+  const AddArticleEvent(this.formData);
 }
 
 class UpdateArticleEvent extends ArticleDetailsEvent {
   final Map<String, dynamic> formData;
 
-  UpdateArticleEvent(this.formData);
+  const UpdateArticleEvent(this.formData);
 }
 
 class ArticlesResetsEvent extends ArticleDetailsEvent {}
@@ -26,7 +26,7 @@ class ArticlesResetsEvent extends ArticleDetailsEvent {}
 class SearchArticlesEvent extends ArticleDetailsEvent {
   final String query;
 
-  SearchArticlesEvent(this.query);
+  const SearchArticlesEvent(this.query);
 
   @override
   List<Object> get props => [query];

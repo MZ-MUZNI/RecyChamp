@@ -70,25 +70,25 @@ class _WelcomeState extends State<Welcome> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Login()),
+                    MaterialPageRoute(builder: (context) => const Login()),
                   );
                 },
                 style: ButtonStyle(
-                  shape: MaterialStateProperty.all(
+                  shape: WidgetStateProperty.all(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                  backgroundColor: MaterialStateProperty.all(
+                  backgroundColor: WidgetStateProperty.all(
                     const Color(0xff06564B),
                   ),
-                  foregroundColor: MaterialStateProperty.all(
+                  foregroundColor: WidgetStateProperty.all(
                     const Color(0xffFFFFFF),
                   ),
-                  padding: MaterialStateProperty.all(
+                  padding: WidgetStateProperty.all(
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   ),
-                  fixedSize: MaterialStateProperty.all(
+                  fixedSize: WidgetStateProperty.all(
                     const Size(160, 52),
                   ),
                 ),
@@ -105,25 +105,25 @@ class _WelcomeState extends State<Welcome> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Signup()),
+                    MaterialPageRoute(builder: (context) => const Signup()),
                   );
                 },
                 style: ButtonStyle(
-                  shape: MaterialStateProperty.all(
+                  shape: WidgetStateProperty.all(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                  backgroundColor: MaterialStateProperty.all(
+                  backgroundColor: WidgetStateProperty.all(
                     const Color(0xff227C70),
                   ),
-                  foregroundColor: MaterialStateProperty.all(
+                  foregroundColor: WidgetStateProperty.all(
                     const Color(0xffFFFFFF),
                   ),
-                  padding: MaterialStateProperty.all(
+                  padding: WidgetStateProperty.all(
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   ),
-                  fixedSize: MaterialStateProperty.all(
+                  fixedSize: WidgetStateProperty.all(
                     const Size(160, 52),
                   ),
                 ),

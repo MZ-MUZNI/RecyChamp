@@ -92,7 +92,7 @@ class _ChallengeSubmissionViewState extends State<ChallengeSubmissionView> {
                                             text: widget.challenge.title,
                                             style: GoogleFonts.poppins(
                                               color: Colors.black
-                                                  .withOpacity(0.50),
+                                                  .withValues(alpha: 0.50),
                                               fontSize: 16,
                                               fontWeight: FontWeight.w400,
                                               height: 0,
@@ -120,7 +120,7 @@ class _ChallengeSubmissionViewState extends State<ChallengeSubmissionView> {
                                             text: widget.challenge.description,
                                             style: GoogleFonts.poppins(
                                               color: Colors.black
-                                                  .withOpacity(0.50),
+                                                  .withValues(alpha: 0.50),
                                               fontSize: 16,
                                               fontWeight: FontWeight.w400,
                                               height: 0,
@@ -153,7 +153,7 @@ class _ChallengeSubmissionViewState extends State<ChallengeSubmissionView> {
                                                         "do MMMM yyyy hh:mm a"),
                                             style: GoogleFonts.poppins(
                                               color: Colors.black
-                                                  .withOpacity(0.50),
+                                                  .withValues(alpha: 0.50),
                                               fontSize: 16,
                                               fontWeight: FontWeight.w400,
                                               height: 0,
@@ -186,7 +186,7 @@ class _ChallengeSubmissionViewState extends State<ChallengeSubmissionView> {
                                                         "do MMMM yyyy hh:mm:ss a"),
                                             style: GoogleFonts.poppins(
                                               color: Colors.black
-                                                  .withOpacity(0.50),
+                                                  .withValues(alpha: 0.50),
                                               fontSize: 16,
                                               fontWeight: FontWeight.w400,
                                               height: 0,
@@ -215,7 +215,7 @@ class _ChallengeSubmissionViewState extends State<ChallengeSubmissionView> {
                                             text: state.submission.description,
                                             style: GoogleFonts.poppins(
                                               color: Colors.black
-                                                  .withOpacity(0.50),
+                                                  .withValues(alpha: 0.50),
                                               fontSize: 16,
                                               fontWeight: FontWeight.w400,
                                               height: 0,
@@ -334,7 +334,7 @@ class _ChallengeSubmissionViewState extends State<ChallengeSubmissionView> {
                                             text: state.submission.experience,
                                             style: GoogleFonts.poppins(
                                               color: Colors.black
-                                                  .withOpacity(0.50),
+                                                  .withValues(alpha: 0.50),
                                               fontSize: 16,
                                               fontWeight: FontWeight.w400,
                                               height: 0,

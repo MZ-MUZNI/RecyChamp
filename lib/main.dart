@@ -234,7 +234,7 @@ class MyApp extends StatelessWidget {
                 labelStyle: TextStyle(color: ChipLabelColor()))),
         // * Welcome screen (if not logged in)
         // home: const Home(),
-        home: Welcome(),
+        home: const Welcome(),
       ),
     );
   }

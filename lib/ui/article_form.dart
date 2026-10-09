@@ -15,8 +15,8 @@ import 'package:recychamp/screens/EducationalResources/bloc/article_details_bloc
 
 class AricleForms extends StatefulWidget {
   const AricleForms({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<AricleForms> createState() => _AricleForm();
@@ -82,7 +82,7 @@ class _AricleForm extends State<AricleForms> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Container(
+                      SizedBox(
                         height: 130,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -208,7 +208,7 @@ class _AricleForm extends State<AricleForms> {
                                   color: Colors.black),
                             ),
                             DropdownButtonFormField<String>(
-                              value: selectedType,
+                              initialValue: selectedType,
                               items: [
                                 "Nature",
                                 "PlantTrees",
@@ -382,19 +382,19 @@ class _AricleForm extends State<AricleForms> {
                               builder: (FormFieldState<dynamic> field) {
                                 return TextButton(
                                   style: ButtonStyle(
-                                    shape: MaterialStateProperty.all<
+                                    shape: WidgetStateProperty.all<
                                         RoundedRectangleBorder>(
                                       RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(10),
                                       ),
                                     ),
-                                    padding: MaterialStateProperty.all(
+                                    padding: WidgetStateProperty.all(
                                         const EdgeInsets.symmetric(
                                             vertical: 10.88, horizontal: 20)),
                                     backgroundColor:
-                                        MaterialStateProperty.all<Color>(
-                                            const Color(0xFF75A488).withOpacity(
-                                                0.6000000238418579)),
+                                        WidgetStateProperty.all<Color>(
+                                            const Color(0xFF75A488).withValues(
+                                                alpha: 0.6000000238418579)),
                                   ),
                                   onPressed: () {
                                     _selectImage(context, ImageSource.gallery);
@@ -441,15 +441,15 @@ class _AricleForm extends State<AricleForms> {
                       },
                       style: ButtonStyle(
                         shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                            WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16.8),
                           ),
                         ),
-                        padding: MaterialStateProperty.all(
+                        padding: WidgetStateProperty.all(
                             const EdgeInsets.symmetric(vertical: 17.88)),
                         backgroundColor:
-                            MaterialStateProperty.all<Color>(Colors.black),
+                            WidgetStateProperty.all<Color>(Colors.black),
                       ),
                       child: Text(
                         "Add Article",

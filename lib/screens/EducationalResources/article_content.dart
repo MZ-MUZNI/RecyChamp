@@ -13,7 +13,7 @@ import 'package:recychamp/screens/EducationalResources/bloc/article_details_bloc
 class ArticleContent extends StatefulWidget {
   final Article articlels;
 
-  ArticleContent({required this.articlels});
+  const ArticleContent({super.key, required this.articlels});
 
   @override
   _ArticleContentState createState() => _ArticleContentState();
@@ -103,7 +103,7 @@ class _ArticleContentState extends State<ArticleContent> {
                         children: [CircularProgressIndicator()],
                       ),
                     ), // Placeholder widget while loading
-                    errorWidget: (context, url, error) => Icon(Icons.error),
+                    errorWidget: (context, url, error) => const Icon(Icons.error),
                   ),
                   Positioned(
                     top: 41.9,

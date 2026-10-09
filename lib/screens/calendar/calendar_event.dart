@@ -112,7 +112,7 @@ class _MyWidgetState extends State<CalendarEvent> {
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  SettingsPage(), // Replace SettingsPage with your settings screen widget
+                                  const SettingsPage(), // Replace SettingsPage with your settings screen widget
                             ),
                           );
                         },
@@ -167,26 +167,22 @@ class _MyWidgetState extends State<CalendarEvent> {
                           onFormatChanged: (format) {},
                           onDaySelected: (selectedDay, focusedDay) {
                             setState(() {
-                              if (selectedDay != null) {
-                                //check selectedday is null
-                                _selectedDay = selectedDay;
-                                _selectedEvents =
-                                    challenges // selected challenge assign to selected challege arry
-                                        .where((challenge) =>
-                                            challenge.startDateTime != null &&
-                                            challenge.endDateTime != null &&
-                                            (challenge.startDateTime
-                                                    .isBefore(selectedDay) ||
-                                                challenge.startDateTime
-                                                    .isAtSameMomentAs(
-                                                        selectedDay)) &&
-                                            (challenge.endDateTime
-                                                    .isAfter(selectedDay) ||
-                                                challenge.endDateTime
-                                                    .isAtSameMomentAs(
-                                                        selectedDay)))
-                                        .toList();
-                              }
+                              //check selectedday is null
+                              _selectedDay = selectedDay;
+                              _selectedEvents =
+                                  challenges // selected challenge assign to selected challege arry
+                                      .where((challenge) =>
+                                          (challenge.startDateTime
+                                                  .isBefore(selectedDay) ||
+                                              challenge.startDateTime
+                                                  .isAtSameMomentAs(
+                                                      selectedDay)) &&
+                                          (challenge.endDateTime
+                                                  .isAfter(selectedDay) ||
+                                              challenge.endDateTime
+                                                  .isAtSameMomentAs(
+                                                      selectedDay)))
+                                      .toList();
                             });
                           },
                           selectedDayPredicate: (day) =>
@@ -365,15 +361,15 @@ class _MyWidgetState extends State<CalendarEvent> {
                   );
                 },
                 style: ButtonStyle(
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16.8),
                     ),
                   ),
-                  padding: MaterialStateProperty.all(
+                  padding: WidgetStateProperty.all(
                       const EdgeInsets.symmetric(vertical: 17.88)),
                   backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.black),
+                      WidgetStateProperty.all<Color>(Colors.black),
                 ),
                 child: Text(
                   "Join Now",

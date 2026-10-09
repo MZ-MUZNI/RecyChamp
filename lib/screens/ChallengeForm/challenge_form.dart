@@ -573,8 +573,8 @@ class _ChallengeFormState extends State<ChallengeForm> {
                                             "JPG, PNG, SVG",
                                             style: GoogleFonts.poppins(
                                               fontSize: 14,
-                                              color: Colors.black.withOpacity(
-                                                  0.6000000238418579),
+                                              color: Colors.black.withValues(
+                                                  alpha: 0.6000000238418579),
                                             ),
                                           ),
                                           const SizedBox(
@@ -586,7 +586,7 @@ class _ChallengeFormState extends State<ChallengeForm> {
                                                   field) {
                                                 return TextButton(
                                                   style: ButtonStyle(
-                                                    shape: MaterialStateProperty
+                                                    shape: WidgetStateProperty
                                                         .all<
                                                             RoundedRectangleBorder>(
                                                       RoundedRectangleBorder(
@@ -596,7 +596,7 @@ class _ChallengeFormState extends State<ChallengeForm> {
                                                       ),
                                                     ),
                                                     padding:
-                                                        MaterialStateProperty
+                                                        WidgetStateProperty
                                                             .all(
                                                                 const EdgeInsets
                                                                     .symmetric(
@@ -605,11 +605,11 @@ class _ChallengeFormState extends State<ChallengeForm> {
                                                                     horizontal:
                                                                         20)),
                                                     backgroundColor:
-                                                        MaterialStateProperty.all<
+                                                        WidgetStateProperty.all<
                                                             Color>(const Color(
                                                                 0xFF75A488)
-                                                            .withOpacity(
-                                                                0.6000000238418579)),
+                                                            .withValues(
+                                                                alpha: 0.6000000238418579)),
                                                   ),
                                                   onPressed: _image == null
                                                       ? _getImage
@@ -749,16 +749,16 @@ class _ChallengeFormState extends State<ChallengeForm> {
                                               "$uploadPercentage%",
                                               style: GoogleFonts.poppins(
                                                 fontSize: 15,
-                                                color: Colors.black.withOpacity(
-                                                    0.6000000238418579),
+                                                color: Colors.black.withValues(
+                                                    alpha: 0.6000000238418579),
                                               ),
                                             ),
                                             Text(
                                               "$_imageSize",
                                               style: GoogleFonts.poppins(
                                                 fontSize: 15,
-                                                color: Colors.black.withOpacity(
-                                                    0.6000000238418579),
+                                                color: Colors.black.withValues(
+                                                    alpha: 0.6000000238418579),
                                               ),
                                             )
                                           ],
@@ -863,18 +863,18 @@ class _ChallengeFormState extends State<ChallengeForm> {
                                         }
                                       },
                                       style: ButtonStyle(
-                                        shape: MaterialStateProperty.all<
+                                        shape: WidgetStateProperty.all<
                                             RoundedRectangleBorder>(
                                           RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(16.8),
                                           ),
                                         ),
-                                        padding: MaterialStateProperty.all(
+                                        padding: WidgetStateProperty.all(
                                             const EdgeInsets.symmetric(
                                                 vertical: 17.88)),
                                         backgroundColor:
-                                            MaterialStateProperty.all<Color>(
+                                            WidgetStateProperty.all<Color>(
                                                 Colors.black),
                                       ),
                                       child: (state is ChallengeAdding ||

@@ -65,7 +65,7 @@ class _ArticleFilterState extends State<ArticleFilter> {
                       style: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
-                        color: Colors.black.withOpacity(0.699999988079071),
+                        color: Colors.black.withValues(alpha: 0.699999988079071),
                       ),
                     ),
                   ],
@@ -80,7 +80,7 @@ class _ArticleFilterState extends State<ArticleFilter> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20.0),
                         side: BorderSide(
-                          color: Colors.black.withOpacity(0.05),
+                          color: Colors.black.withValues(alpha: 0.05),
                         ),
                       ),
                       showCheckmark: false,
@@ -137,16 +137,16 @@ class _ArticleFilterState extends State<ArticleFilter> {
                   child: TextButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(16.8),
                         ),
                       ),
-                      padding: MaterialStateProperty.all(
+                      padding: WidgetStateProperty.all(
                           const EdgeInsets.symmetric(
                               horizontal: 93.61, vertical: 17.88)),
                       backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.black),
+                          WidgetStateProperty.all<Color>(Colors.black),
                     ),
                     child: Text(
                       "Confirm",

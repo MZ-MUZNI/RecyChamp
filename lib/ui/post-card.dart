@@ -233,7 +233,7 @@ class _PostCardState extends State<PostCard> {
           side: BorderSide(
             width: 1,
             strokeAlign: BorderSide.strokeAlignOutside,
-            color: Colors.black.withOpacity(0.10000000149011612),
+            color: Colors.black.withValues(alpha: 0.10000000149011612),
           ),
           borderRadius: BorderRadius.circular(12.62),
         ),
@@ -248,7 +248,7 @@ class _PostCardState extends State<PostCard> {
               children: [
                 Row(
                   children: [
-                    Container(
+                    SizedBox(
                         width: 46,
                         height: 46,
                         // child: CircleAvatar(
@@ -261,11 +261,11 @@ class _PostCardState extends State<PostCard> {
                               if (snapshot.connectionState ==
                                   ConnectionState.waiting) {
                                 // Show a loading indicator while fetching the image URL
-                                return CircularProgressIndicator();
+                                return const CircularProgressIndicator();
                               } else if (snapshot.hasError ||
                                   snapshot.data == null) {
                                 // Show an error message if there's an error or imageURL is null
-                                return Text('Failed to load user image');
+                                return const Text('Failed to load user image');
                               } else {
                                 // Use the retrieved imageURL to load the image
                                 String imageURL = snapshot.data!;
@@ -286,10 +286,10 @@ class _PostCardState extends State<PostCard> {
                           builder: (context, snapshot) {
                             if (snapshot.connectionState ==
                                 ConnectionState.waiting) {
-                              return CircularProgressIndicator();
+                              return const CircularProgressIndicator();
                             } else if (snapshot.hasError ||
                                 snapshot.data == null) {
-                              return Text('Failed to load username');
+                              return const Text('Failed to load username');
                             } else {
                               String userName = snapshot.data!;
                               return Text(
@@ -493,7 +493,7 @@ class _PostCardState extends State<PostCard> {
                                                                     .connectionState ==
                                                                 ConnectionState
                                                                     .waiting) {
-                                                              return CircularProgressIndicator();
+                                                              return const CircularProgressIndicator();
                                                             } else if (snapshot
                                                                     .hasError ||
                                                                 snapshot.data ==
@@ -533,8 +533,8 @@ class _PostCardState extends State<PostCard> {
                                                                             10),
                                                                 color: Colors
                                                                     .black
-                                                                    .withOpacity(
-                                                                        0.15)),
+                                                                    .withValues(
+                                                                        alpha: 0.15)),
                                                             child: Container(
                                                               margin:
                                                                   const EdgeInsets
@@ -559,7 +559,7 @@ class _PostCardState extends State<PostCard> {
                                                                               .connectionState ==
                                                                           ConnectionState
                                                                               .waiting) {
-                                                                        return CircularProgressIndicator();
+                                                                        return const CircularProgressIndicator();
                                                                       } else if (snapshot
                                                                               .hasError ||
                                                                           snapshot.data ==
