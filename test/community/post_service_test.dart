@@ -162,3 +162,7 @@
 //     expect(liked, false);
 //   });
 // }
+
+// The original service tests above are retained as a disabled legacy suite.
+// A test file still needs an entry point so `flutter test` can load it.
+void main() {}

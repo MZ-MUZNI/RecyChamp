@@ -42,7 +42,9 @@ void main() async {
   Stripe.publishableKey =
       "pk_test_51OxXnMEf9JrvdLmiMP1HV9Wk3X4jFaYGSOn4rcUOiC30djKuRtOBpBg8wUc6vGWcuWyZXF3jYTCsufusIyeC9L8S00iMlssUpm";
 
-  await dotenv.load(fileName: ".env");
+  // Local payment configuration is optional so a fresh clone can start.
+  // Checkout validates the required value before making a payment request.
+  await dotenv.load(fileName: ".env", isOptional: true);
 
   // * Manually sign in to implement challenge submission (roles: admin, organizer, parent)
   // * remove this when implementing authentication

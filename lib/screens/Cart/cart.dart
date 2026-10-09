@@ -149,6 +149,16 @@ class _CartState extends State<Cart> {
   }
 
   void payment() async {
+    final stripeSecret = dotenv.maybeGet('STRIPE_SECRET');
+    if (stripeSecret == null || stripeSecret.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Checkout is not configured for this build.'),
+        ),
+      );
+      return;
+    }
+
     try {
       Map<String, dynamic> body = {
         "amount": cartTotal.toString(),
@@ -157,7 +167,7 @@ class _CartState extends State<Cart> {
       var response = await http.post(
         Uri.parse("https://api.stripe.com/v1/payment_intents"),
         headers: {
-          "Authorization": 'Bearer ${dotenv.env['STRIPE_SECRET']}',
+          "Authorization": 'Bearer $stripeSecret',
           //pk
           //sk
           "Content-type": "application/x-www-form-urlencoded"
